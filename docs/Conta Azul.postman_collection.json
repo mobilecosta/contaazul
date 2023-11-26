@@ -1,0 +1,402 @@
+{
+	"info": {
+		"_postman_id": "7f98b8e8-a183-4a4f-95d3-ff59e463c5b8",
+		"name": "Conta Azul",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1755482"
+	},
+	"item": [
+		{
+			"name": "Token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic WHRFazBSN0ZlSzh6NlczSWtUQXVwQlpQaWVwTHBMUnU6OW5CWUJYNjAxcW9lbEZxY0F2b3FBNDFWaHpIZ2NhTGk=",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.contaazul.com/oauth2/token?grant_type=authorization_code&redirect_uri=https://protheusapi.conceitho.com/OAUTHCALLBACK&code=ijfMWrL33ZlujWJO98cOjSu4dp7JQ1S4",
+					"protocol": "https",
+					"host": [
+						"api",
+						"contaazul",
+						"com"
+					],
+					"path": [
+						"oauth2",
+						"token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "authorization_code"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "https://protheusapi.conceitho.com/OAUTHCALLBACK"
+						},
+						{
+							"key": "code",
+							"value": "ijfMWrL33ZlujWJO98cOjSu4dp7JQ1S4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Autorizacao",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic bHhIRUxNMGpUbjBLR1Y2dE0wVmJMSzBZNmg2d0VvZG06djNsUENDclVTVEllN0l5OGRmMW12VERuWWpkOEdEYmE=",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.contaazul.com/auth/authorize?redirect_uri=https://protheusapi.conceitho.com/OAUTHCALLBACK&client_id=XtEk0R7FeK8z6W3IkTAupBZPiepLpLRu&scope=sales&state=DCEeFWf45A53sdfKef424",
+					"protocol": "https",
+					"host": [
+						"api",
+						"contaazul",
+						"com"
+					],
+					"path": [
+						"auth",
+						"authorize"
+					],
+					"query": [
+						{
+							"key": "redirect_uri",
+							"value": "https://protheusapi.conceitho.com/OAUTHCALLBACK"
+						},
+						{
+							"key": "client_id",
+							"value": "XtEk0R7FeK8z6W3IkTAupBZPiepLpLRu"
+						},
+						{
+							"key": "scope",
+							"value": "sales"
+						},
+						{
+							"key": "state",
+							"value": "DCEeFWf45A53sdfKef424"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listagem de Produtos",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer gIwiPgVKsLiw3Mc5YH2IgMlTo3kxIfGt"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.contaazul.com/v1/products",
+					"protocol": "https",
+					"host": [
+						"api",
+						"contaazul",
+						"com"
+					],
+					"path": [
+						"v1",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get de Produtos",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer jGwt7aoWAAcI7yjN2iPRhOwqnURwv3GC"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://api.contaazul.com/v1/products/aa101f33-2c6a-4f55-806d-38f0f451b2f0",
+					"protocol": "https",
+					"host": [
+						"api",
+						"contaazul",
+						"com"
+					],
+					"path": [
+						"v1",
+						"products",
+						"aa101f33-2c6a-4f55-806d-38f0f451b2f0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh Token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic WDVZV2FVSlpjNDNMbElOMzZkWDZXVkVQOG9NcVVqVGs6VkJYdk92b0RJVkRVQzBqOVVmYXZjeENvbHFjUE9HbUc=",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://api.contaazul.com/oauth2/token?grant_type=refresh_token&refresh_token=MnOn2MnVzV9L7oJczzbggwWf4HSru0rs",
+					"protocol": "https",
+					"host": [
+						"api",
+						"contaazul",
+						"com"
+					],
+					"path": [
+						"oauth2",
+						"token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "refresh_token"
+						},
+						{
+							"key": "refresh_token",
+							"value": "MnOn2MnVzV9L7oJczzbggwWf4HSru0rs"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criação de Produto",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer jSpexZFJiuLMOl04UkIH3U8MsDJWVXCH"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"code\":\"001\",\r\n   \"name\":\"PRODUTO\",\r\n   \"value\":0,\r\n   \"cost\":0,\r\n   \"barcode\":\"\",\r\n   \"available_stock\":0,\r\n   \"ncm_code\":\"\"\r\n}"
+				},
+				"url": {
+					"raw": "https://api.contaazul.com/v1/products/",
+					"protocol": "https",
+					"host": [
+						"api",
+						"contaazul",
+						"com"
+					],
+					"path": [
+						"v1",
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alteração de Produto",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer VutXL8eN68K7SadTz5SltBk7hZYSBnrM"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"PRODUTO\",\n    \"value\": 1000,\n    \"cost\": 800,\n    \"barcode\": \"1234567890123\",\n    \"available_stock\": 0,\n    \"ncm_code\": \"84485190\",\n    \"cest_code\": null,\n    \"net_weight\": 1.5,\n    \"gross_weight\": 2.0\n}"
+				},
+				"url": {
+					"raw": "https://api.contaazul.com/v1/products/e537da70-9c27-4a5c-b309-a1bd3d3aa0cf",
+					"protocol": "https",
+					"host": [
+						"api",
+						"contaazul",
+						"com"
+					],
+					"path": [
+						"v1",
+						"products",
+						"e537da70-9c27-4a5c-b309-a1bd3d3aa0cf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Envio NFCE",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer WKJXEQxOZLsSxEBrDkqCjq6t8ZgGO8By",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "document",
+							"value": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<CFe><infCFe Id=\"CFe35190427543959000120590004430290000951825661\" versao=\"0.07\" versaoDadosEnt=\"0.07\" versaoSB=\"020001\"><ide><cUF>35</cUF><cNF>182566</cNF><mod>59</mod><nserieSAT>000443029</nserieSAT><nCFe>000095</nCFe><dEmi>20190401</dEmi><hEmi>161404</hEmi><cDV>1</cDV><tpAmb>1</tpAmb><CNPJ>09389576000167</CNPJ><signAC>RCoW/7Wv8JW0GCPXfXuOWjJ3VZj6eB8aIncOinqmpa/STr9CjtjKcUbNC0fhegg25F/hjCSH4+s4eBwfxPOJWPPMQD+KOQl6z1RF0OlJCTVho0IJGsn5h+6YdhuIB62tl2oF6kuNlMJSSGIXU74Z76AZvWhpIfRVDuIFZm0wEA4fI+K5ox2HtmDfcNaonr9SW28f93F0jlafl9/zJVEOaBJT3RV+yr2CzyMBUTrMUNxrzq+7hpJ2ZSwRdrbpAEENwBFB/9w6/xnxzmbvBEZuKF/VP+brltPIcqEtvmQMA+FtV6PRbWd8o/jVXpFeuu+taKRPgA9h/IRoGbgiQTLVjA==</signAC><assinaturaQRCODE>ULMgEZXKZerZHkeXiwNdC1b/j0BS7HKq57n/hUcOGdHpgSW0Xeqx7Q/TZdsJ61kAA6cep3LILoO2o7fmsLvVE3+XtKxv0w9utOcdodASSEdja8Rf39Lkl/b5Sx0rYMb2Oom+YqBT9wEcqAr1wB0uPp5PCaW8Rz3yquMp5pC0dRYlHJQxr/pQbekaLCyYwUfVJqhBQLDlhu0Fy9yM6YG3HW3mEuhyCIsysYvf0cVsRrWiLZS0R4NWgAV9vuWOoBjQqhrFpzn3f6tRZvdquHi6h3njn11LOX5DZGNkuz/jlaHAtvq3J6PlbQEvVkk9Sc0FSZyM5b5q6TCxGIyw6nOEpQ==</assinaturaQRCODE><numeroCaixa>001</numeroCaixa></ide><emit><CNPJ>27543959000120</CNPJ><xNome>SANTANA S SOM CENTRO DO SOM COMERCIO DE PECAS E A</xNome><xFant>SANTANA S SOM</xFant><enderEmit><xLgr>AVENIDA CAPITAO CASA</xLgr><nro>1409</nro><xCpl>TERREO1411</xCpl><xBairro>DOS CASA</xBairro><xMun>SAO BERNARDO DO CAMPO</xMun><CEP>09812000</CEP></enderEmit><IE>635968489111</IE><cRegTrib>1</cRegTrib><cRegTribISSQN>1</cRegTribISSQN><indRatISSQN>N</indRatISSQN></emit><dest></dest><det nItem=\"1\"><prod><cProd>11</cProd><xProd>Xenon</xProd><NCM>85392110</NCM><CFOP>5102</CFOP><uCom>UN</uCom><qCom>1.0000</qCom><vUnCom>180.00</vUnCom><vProd>180.00</vProd><indRegra>A</indRegra><vItem>180.00</vItem></prod><imposto><vItem12741>46.66</vItem12741><ICMS><ICMSSN102><Orig>0</Orig><CSOSN>102</CSOSN></ICMSSN102></ICMS><PIS><PISSN><CST>49</CST></PISSN></PIS><COFINS><COFINSSN><CST>49</CST></COFINSSN></COFINS></imposto></det><det nItem=\"2\"><prod><cProd>15</cProd><xProd>Radio c/ BT</xProd><NCM>85271990</NCM><CFOP>5102</CFOP><uCom>UN</uCom><qCom>1.0000</qCom><vUnCom>250.00</vUnCom><vProd>250.00</vProd><indRegra>A</indRegra><vItem>250.00</vItem></prod><imposto><vItem12741>120.30</vItem12741><ICMS><ICMSSN102><Orig>0</Orig><CSOSN>102</CSOSN></ICMSSN102></ICMS><PIS><PISSN><CST>49</CST></PISSN></PIS><COFINS><COFINSSN><CST>49</CST></COFINSSN></COFINS></imposto></det><det nItem=\"3\"><prod><cProd>2</cProd><xProd>PELICULA G20 </xProd><NCM>39199090</NCM><CFOP>5102</CFOP><uCom>UN</uCom><qCom>1.0000</qCom><vUnCom>80.00</vUnCom><vProd>80.00</vProd><indRegra>A</indRegra><vItem>80.00</vItem></prod><imposto><vItem12741>20.74</vItem12741><ICMS><ICMSSN102><Orig>0</Orig><CSOSN>102</CSOSN></ICMSSN102></ICMS><PIS><PISSN><CST>49</CST></PISSN></PIS><COFINS><COFINSSN><CST>49</CST></COFINSSN></COFINS></imposto></det><total><ICMSTot><vICMS>0.00</vICMS><vProd>510.00</vProd><vDesc>0.00</vDesc><vPIS>0.00</vPIS><vCOFINS>0.00</vCOFINS><vPISST>0.00</vPISST><vCOFINSST>0.00</vCOFINSST><vOutro>0.00</vOutro></ICMSTot><vCFe>510.00</vCFe><vCFeLei12741>187.69</vCFeLei12741></total><pgto><MP><cMP>01</cMP><vMP>510.00</vMP></MP><vTroco>0.00</vTroco></pgto><infAdic><infCpl> :: Sistema SlimPDV :: </infCpl><obsFisco xCampo=\"04.04.05.04\"><xTexto>Comete crime quem sonega</xTexto></obsFisco></infAdic></infCFe><Signature xmlns=\"http://www.w3.org/2000/09/xmldsig#\"><SignedInfo><CanonicalizationMethod Algorithm=\"http://www.w3.org/TR/2001/REC-xml-c14n-20010315\"></CanonicalizationMethod><SignatureMethod Algorithm=\"http://www.w3.org/2001/04/xmldsig-more#rsa-sha256\"></SignatureMethod><Reference URI=\"#CFe35190427543959000120590004430290000951825661\"><Transforms><Transform Algorithm=\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\"></Transform><Transform Algorithm=\"http://www.w3.org/TR/2001/REC-xml-c14n-20010315\"></Transform></Transforms><DigestMethod Algorithm=\"http://www.w3.org/2001/04/xmlenc#sha256\"></DigestMethod><DigestValue>x5stOcP0HKabESkfLj4EaQeCVRDv07T4kJkOoDjL3Rc=</DigestValue></Reference></SignedInfo><SignatureValue>AASXucwWZPO//6WBgvfG9C2MbmO5iNSa3bTTR0QAHUq0kjYtEMGkkxGt+P1deDuPOzeveFMbZdS+kJtKQfIv+J9qn/XtfJ7AtJ4h3O+zBAhcF0C2Ljo2qA5+FtKxiMB/a02euaY//msgcKpvoE37hl5Ztyf0YOYaZ7uZMRV4AX6IQToxXX/8sSrBfuNm0/ILsPkL861BGRl2IVbkaWpCcwbvaXM8keYkUiy3Y9QAPBfi5vmldNan18YvjJhMLPBSqJ9hOo8yxnzTqTNH3oA3BoYm6+YoVzui43vjW8USl6dlNJok5iM3A3ttmMOuqM/xa+O2RNnZhkldWOK6sLjW5g==</SignatureValue><KeyInfo><X509Data><X509Certificate>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</X509Certificate></X509Data></KeyInfo></Signature></CFe>",
+							"type": "text"
+						},
+						{
+							"key": "event",
+							"value": "ISSUE",
+							"type": "text"
+						},
+						{
+							"key": "template",
+							"value": "NFCE",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.contaazul.com/v1/sales/3f92f5f1-709d-45f2-ba08-3524aa718dd6/invoices",
+					"protocol": "https",
+					"host": [
+						"api",
+						"contaazul",
+						"com"
+					],
+					"path": [
+						"v1",
+						"sales",
+						"3f92f5f1-709d-45f2-ba08-3524aa718dd6",
+						"invoices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listagem de Vendas",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer WKJXEQxOZLsSxEBrDkqCjq6t8ZgGO8By",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.contaazul.com/v1/sales",
+					"protocol": "https",
+					"host": [
+						"api",
+						"contaazul",
+						"com"
+					],
+					"path": [
+						"v1",
+						"sales"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta Venda",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer efjFcNNZiZTZcrgEE49vGKE7h7xcquGR",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.contaazul.com/v1/sales/3fb114e0-b6c3-4dee-a2a9-f2f387e6ba74",
+					"protocol": "https",
+					"host": [
+						"api",
+						"contaazul",
+						"com"
+					],
+					"path": [
+						"v1",
+						"sales",
+						"3fb114e0-b6c3-4dee-a2a9-f2f387e6ba74"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
