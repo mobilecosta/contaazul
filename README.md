@@ -1,13 +1,16 @@
 # contaazul
 https://login.contaazul.com
+
 Usuário: wagner.mobile.costa@contaazul.com
+
 Senha: V2FnbmVyIE1vYmlsZSBDb3N0YQ==
 
-mobile.costa@gmail.com
-303351@Wag
+mobile.costa@gmail.com - 303351@Wag
 
 client_id: XtEk0R7FeK8z6W3IkTAupBZPiepLpLRu
+
 client_secret: 9nBYBX601qoelFqcAvoqA41VhzHgcaLi 
+
 Redirect: https://protheusapi.conceitho.com/OAUTHCALLBACK
 
 WHRFazBSN0ZlSzh6NlczSWtUQXVwQlpQaWVwTHBMUnU6OW5CWUJYNjAxcW9lbEZxY0F2b3FBNDFWaHpIZ2NhTGk=
