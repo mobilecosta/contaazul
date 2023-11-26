@@ -1,11 +1,17 @@
 # contaazul
+Sistemas:
 https://login.contaazul.com
+
+mobile.costa@gmail.com - 303351@Wag
+
+Apis:
+https://contaazul.com/desenvolvedores/
+
+https://developers.contaazul.com/
 
 Usuário: wagner.mobile.costa@contaazul.com
 
 Senha: V2FnbmVyIE1vYmlsZSBDb3N0YQ==
-
-mobile.costa@gmail.com - 303351@Wag
 
 client_id: XtEk0R7FeK8z6W3IkTAupBZPiepLpLRu
 
